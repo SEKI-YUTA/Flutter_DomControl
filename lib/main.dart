@@ -81,6 +81,13 @@ class _DomControlState extends State<DomControl> {
   }
 
   @override
+  void dispose() {
+    _urlEditingController.dispose();
+    _queryEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
